@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <title>Login Page</title>
+  <head class="head">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" />
+    <title>Login Page</title>
+  </head>
+  <body style="padding: top 30px">
+    <div class="">
+      <div align="center" class="loginPage">
+        <div class="container">
+          <div class="photo-container" align="center">
+            <img
+              src="assets/hrm-human-resource-management-icon-label-badge-vector-stock-illustration_100456-10644.avif"
+              alt="Background Photo"
+            />
+          </div>
+          <div class="login-container">
+            <form class="login-form" [formGroup]="loginForm">
+              <h1>Employee Login</h1>
+              <mat-divider></mat-divider>
+              <mat-form-field class="example-full-width">
+                <mat-label>User Id</mat-label>
+                <input
+                  matInput
+                  type="email"
+                  formControlName="userId"
+                  placeholder="User Id"
+                  required
+                />
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <mat-label>Password</mat-label>
+                <input
+                  matInput
+                  type="password"
+                  formControlName="password"
+                  placeholder="Password"
+                  required
+                />
+              </mat-form-field>
+              <button
+                mat-raised-button
+                type="submit"
+                style="
+                  background-color: rgb(9, 71, 179);
+                  color: white;
+                  border-radius: 30px;
+                "
+                (click)="login()"
+                class="login-btn"
+              >
+                Login
+              </button>
+              <div style="margin-right: 200px">
+                <button type="button" mat-raised-button color="primary">
+                  <a routerLink="forgotpswd" routerLinkActive="active"
+                    ><small style="color: white">Forgot Password</small></a
+                  >
+                </button>
+              </div>
+              <!-- //------------------------------------------------------------------------ -->
+              <!-- <div align="center" style="margin-top: 10px;">
+
+              <button mat-raised-button class="btnHelp" style="margin-left: 10px;" type="button" (click)="OpenPopUp()">
+                <mat-icon>help</mat-icon>Help</button>
+
+            </div> -->
+              <!-- //------------------------------------------------------------------------ -->
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

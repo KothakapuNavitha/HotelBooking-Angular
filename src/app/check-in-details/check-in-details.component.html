@@ -1,0 +1,85 @@
+<form class="form" [formGroup]="checkInDetailsForm">
+<div class="header">
+  <h1>CheckIn Details</h1>
+</div>
+<div class="container-fluid">
+  <div class="col-8">
+  </div>
+<div class="row">
+  <div class="col-4">
+    <mat-form-field appearance="outline">
+    <mat-label>Room Number</mat-label>
+    <input type="number" matInput placeholder="Room Number" [(ngModel)]="RoomNo" [ngModelOptions]="{standalone:true}">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Client Name</mat-label>
+      <input type="text" matInput placeholder="Client Name" formControlName="clientName">
+    </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>No Of Persons</mat-label>
+        <input type="number" matInput placeholder="No Of Persons" formControlName="no_OfPersons">
+      </mat-form-field>
+      </div>
+  </div>
+  <div class="row">
+    <div class="col-4">
+    <mat-form-field appearance="outline">
+    <mat-label>Price</mat-label>
+    <input type="number" matInput placeholder="Price" formControlName="price">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>BookingType</mat-label>
+      <mat-select #mode value="select" formControlName="BookingType">
+          <mat-option value="Select">Select</mat-option>
+        <mat-option value="GA">GA</mat-option>
+        <mat-option value="Offline">Offline</mat-option>
+      </mat-select>
+    </mat-form-field>
+      <mat-form-field appearance="outline" class="bookingDate">
+        <mat-label>Booking Date</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="BookingDate">
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      </div>
+  </div>
+  <div class="row">
+    <div class="col-4">
+    <mat-form-field appearance="outline">
+    <mat-label>Paid Amount</mat-label>
+    <input type="number" matInput placeholder="Paid Amount" formControlName="paidAmount">
+    </mat-form-field>
+      <mat-form-field appearance="outline">
+      <mat-label>Pending Amount</mat-label>
+      <input type="number" matInput placeholder="Pending Amount" formControlName="pendingAmount">
+      </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Amount Cleared fully</mat-label>
+          <mat-select #mode value="select" formControlName="amount_Cleared">
+              <mat-option value="Select">Select</mat-option>
+            <mat-option value="Yes">Yes</mat-option>
+            <mat-option value="No">No</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <mat-form-field appearance="outline" class="desc">
+        <mat-label>Notes</mat-label>
+        <textarea type="text" matInput placeholder="Notes" formControlName="notes"></textarea>
+      </mat-form-field>
+    </div>
+  </div>
+  </div>
+  <div class="msg"  [ngStyle]="{'background-color':textcolor,'color':'white'}">
+    {{msg}}</div>
+  <div>
+    <button class="btnsubmit" type="submit" mat-raised-button color="primary" (click)="Submit()"><mat-icon>save</mat-icon>Submit</button>
+    <button class="btnupdate" type="button" mat-raised-button color="accent"  (click)="Update()"><mat-icon>cached</mat-icon>Update</button>
+    <button class="btnget"    type="button" mat-raised-button color="accent" (click)="Get()"><mat-icon>cached</mat-icon>Get</button>
+    <button class="btndelete" type="button" mat-raised-button color="red" (click)="Delete()"><mat-icon>clear_all</mat-icon>Delete</button>
+    <button class="btnclear" type="button" mat-raised-button color="red" (click)="Clear()"><mat-icon>clear</mat-icon>Clear</button>
+
+  </div>
+</form>

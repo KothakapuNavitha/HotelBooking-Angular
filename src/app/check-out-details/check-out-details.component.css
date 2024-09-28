@@ -1,0 +1,65 @@
+.form{
+  background-color: white;
+  text-align: center;
+  }
+  .header{
+    width:100%;
+    height:30px;
+    color: white;
+    margin-bottom: 60px;
+    padding-top:1px;
+    text-align:center;
+    padding-left: 3px;
+    background: linear-gradient(to bottom,rgb(126, 126, 246),rgb(20, 100, 198));
+  }
+
+  mat-form-field {
+     gap: 1;
+    padding-right:px;
+    margin-left:30px ;
+     /* width: 33%; */
+  }
+   .container {
+    padding-top: 2%;
+  }
+  .roomNo{
+ /* margin-left: 20px; */
+  }
+  .bookingDate{
+    width:17%;
+  }
+  .desc{
+    width: 56.5%;
+    padding-right:-3px ;
+    /* margin-right:80px ; */
+  }
+
+  ::ng-deep .mat-mdc-form-field-infix {
+    min-height: 39px;
+    font-size: x-small;
+  }
+   mat-mdc-text-field-wrapper
+  mdc-text-field
+  ng-tns-c1205077789-4
+  mdc-text-field--filled {
+  top: -1.5em !important;
+  }
+  ::ng-deep .mat-mdc-form-field-flex > .mat-mdc-form-field-infix {
+    padding: 0.4em 0px !important;
+  }
+  ::ng-deep .mat-mdc-text-field-wrapper {
+    top: -1.5em !important;
+  }
+  .btnsubmit{
+  margin-left:20px ;
+  }
+  .btndelete{
+    margin-left:20px ;
+  }
+  .btnget{
+    margin-right:80px ;
+    background-color: green;
+     margin-bottom:42px ;
+     width: 13%;
+     margin-left:60px ;
+  }
